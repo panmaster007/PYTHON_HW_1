@@ -21,3 +21,33 @@ if k < n * m:
         print('Нет')
 else:
     print('Не жадничай')
+
+===============================================
+
+number = input('Введите шестизначный номер билета: ')
+
+if int(number) < 99999 or int(number) > 1000000:
+    print('Вы ввели не шестизначный номер')
+
+else:
+    first_part = sum(map(int, number[:3]))
+    second_part = sum(map(int, number[3:]))
+    if first_part == second_part:
+        print('Yes')
+    else:
+        print('No')
+        
+        =========================================================
+        
+part_n = int(input('Сколько долек в длину? '))
+part_m = int(input('Сколько долек в ширину? '))
+part_k = int(input('Сколько долек нужно отломить? '))
+
+if (part_k % part_n == 0 or part_k % part_m == 0) and part_k <= part_n * part_m:
+    print('YES')
+else:
+    print('NO')
+    
+    =======================================================
+    
+    
