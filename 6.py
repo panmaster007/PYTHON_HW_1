@@ -10,9 +10,11 @@
 
 number = int(input('Введите номер билетика: '))
 if number > 99999 and number <1000000:
-   if 
-  
-
-
+   left_part = sum(map(int, number[:3]))
+   right_part = sum(map(int, number[3:]))
+   if left_part == right_part:
+      print('Ваш билетик счастливый!!!')
+   else:
+      print('Ваш билетик обычный')
 else:
    print('Вы ввели не шестизначный номер билетика либо вообще не число !!!') 
