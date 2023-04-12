@@ -8,8 +8,8 @@
 #         123456 -> no
      
 
-number = int(input('Введите номер билетика: '))
-if number > 99999 and number <1000000:
+number = input('Введите номер билетика: ')
+if int(number) > 99999 and int(number) <1000000:
    left_part = sum(map(int, number[:3]))
    right_part = sum(map(int, number[3:]))
    if left_part == right_part:
@@ -17,4 +17,6 @@ if number > 99999 and number <1000000:
    else:
       print('Ваш билетик обычный')
 else:
-   print('Вы ввели не шестизначный номер билетика либо вообще не число !!!') 
+   print('Вы ввели не шестизначный номер билетика либо вообще не число !!!')
+
+
