@@ -3,4 +3,16 @@
 # В последующих  строках записаны N целых чисел Ai.
 # Последняя строка содержит число X
 
-
+from random import randint
+N = int(input("\nВведите количество элементов массива: "))
+count = 0
+lists = []
+for el in range(0, N):
+    i = randint(0, N)
+    lists.append(i)
+print(f"\n{lists}")
+X = int(input("\nВведите число которое будем искать: "))
+for i in range(0, len(lists)):
+    if lists[i] == X:
+        count += 1
+print(f"\nЧисло {X} встречается в списке {count} раз.\n")
