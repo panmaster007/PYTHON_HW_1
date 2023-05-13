@@ -21,5 +21,3 @@ def summ(a, b, c):
 x = int(input("Введите число N: "))
 print(degree(2, x, 1))
 print(summ(1, x, 0))
-
-
