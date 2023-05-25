@@ -9,3 +9,20 @@
 # В ответе напишите “Парам пам-пам”, если с ритмом все в порядке
 # и “Пам парам”, если с ритмом все не в порядке
 
+stih = list(input("Введите стих: ").split(" "))
+count = []
+glasnie = ["а", "о", "У", "е", "ы", "э", "я", "и", "ю"]
+def ritm(tekst):
+    m=0
+    for x in stih:
+        count.append(0)
+        k=list(filter(lambda i: i in glasnie, x))
+        count[m]=len(k)
+        m+=1
+    for i in range(len(count)-1):
+        if count[i]!=count[i+1]:
+            print("Пам парам")
+            return
+    print("Парам пам-пам")
+    return
+ritm(stih)
