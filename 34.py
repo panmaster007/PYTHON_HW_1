@@ -9,14 +9,14 @@
 # В ответе напишите “Парам пам-пам”, если с ритмом все в порядке
 # и “Пам парам”, если с ритмом все не в порядке
 
-stih = list(input("Введите стих: ").split(" "))
+stih = list(input("Введите фразы Винни-Пуха: ").split(" "))
 count = []
-glasnie = ["а", "о", "У", "е", "ы", "э", "я", "и", "ю"]
-def ritm(tekst):
+glasn_letter = ["а", "о", "У", "е", "ы", "э", "я", "и", "ю"]
+def rhythm(tekst):
     m=0
     for x in stih:
         count.append(0)
-        k=list(filter(lambda i: i in glasnie, x))
+        k=list(filter(lambda i: i in glasn_letter, x))
         count[m]=len(k)
         m+=1
     for i in range(len(count)-1):
@@ -25,4 +25,4 @@ def ritm(tekst):
             return
     print("Парам пам-пам")
     return
-ritm(stih)
+rhythm(stih)
